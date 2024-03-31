@@ -5,16 +5,16 @@ node {
     
     stage ("Maven Build - VulabMicroservice") {
 	
-        sh 'mvn compile'
+        'mvn compile'
 
     }
     
     stage ("Package - VulabMicroservice") {
-        sh  'mvn package'
+         'mvn package'
     }
     
     stage ("API Tests- VulabMicroservice") {
-        sh  'mvn test'
+         'mvn test'
     }
     
     stage('User Acceptance Test - VulabMicroservice') {
@@ -26,7 +26,7 @@ node {
 	  if(response=="Yes") {
 
 	    stage('Release- VulabMicroservice') {
-	     sh 'echo VulabMicroservice is ready to release!'
+	     'echo VulabMicroservice is ready to release!'
 
 	    }
 	  }
